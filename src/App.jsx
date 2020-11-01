@@ -13,6 +13,10 @@ import TabelaProdutos from './components/repeticao/TabelaProdutos';
 import ParOuImpar from './components/condicional/ParOuImpar'
 import UsuarioInfo from './components/condicional/UsuarioInfo'
 import DiretaPai from './components/comunicacao/DiretaPai';
+import IndiretaPai from "./components/comunicacao/IndiretaPai.jsx"
+import Input from './components/formulario/Input';
+import Contador from './components/contador/Contador'
+import Mega from './components/mega/Mega'
 
 export default () => (
 
@@ -21,7 +25,23 @@ export default () => (
 
         <div className="Cards">
 
-        <Card titulo="#09 - Comunicação Direta" color="#982395"> 
+            <Card titulo="#13 - Mega" color="#B9006E">
+                <Mega qtde={8}></Mega>
+            </Card>
+
+            <Card titulo="#12 - Contador" color="#424242">
+                <Contador numeroInicial={100}></Contador>
+            </Card>
+
+            <Card titulo="#11 - Componente Controlado (Input)" color="red">
+                <Input></Input>
+            </Card>
+
+            <Card titulo="#10 - Comunicação Indireta" color="#8BAD39">
+                <IndiretaPai></IndiretaPai>
+            </Card>
+
+            <Card titulo="#09 - Comunicação Direta" color="#59323C">
                 <DiretaPai usuario={{ nome: 'Fernando' }} />
             </Card>
 
